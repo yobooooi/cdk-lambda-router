@@ -6,7 +6,7 @@ class Base(ABC):
     pass
 
   @abstractmethod
-  def remediate(self):
+  def remediate(self, resource_identifier):
     pass
 
   @abstractmethod

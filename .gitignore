@@ -1,4 +1,2 @@
 cdk.out/*
-*/__pycache__/*
-
-bin/*/*/__pycache__/*
+**/__pycache__/
