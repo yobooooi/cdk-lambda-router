@@ -7,6 +7,7 @@ from pathlib import Path
 from threading import activeCount
 
 def controller(event, context):
+  sys.path.append(str(Path.cwd() / "remediators"))
   try:
     event_pattern = event['event_pattern']
     spec = importlib.util.spec_from_file_location("", location="./remediators/{0}/main.py".format(event["control"]))
@@ -21,8 +22,8 @@ def controller(event, context):
 if __name__ == "__main__":
   sys.path.append(str(Path.cwd() / "remediators"))
   event = {
-    "control"             : "AWSS3bucketsAreAccessibleToPublic",
-    "resource_identifier" : "arn::test",
+    "control"             : "AWSS3BucketPubliclyReadable",
+    "resource_identifier" : "arn::test03",
     "account_id"          : "1234567890987"
   }
 
