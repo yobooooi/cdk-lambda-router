@@ -4,7 +4,6 @@ import os
 import sys
 
 from pathlib import Path
-from threading import activeCount
 
 def controller(event, context):
   sys.path.append(str(Path.cwd() / "remediators"))
